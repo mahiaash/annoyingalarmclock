@@ -9,10 +9,23 @@ const HomePage ({Key? key}) : super(key: key);
   }
   
   class _HomePageState extends State<HomePage>{
+    
+    void _showTimePicker(){
+      showTimePicker(context: context, initialTime: TimeOfDay.now());
+    }
+
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Scaffold(
+      body:Center(
+        child:IconButton(
+          onPressed:_showTimePicker,
+          icon: Icon(Icons.add)
+         )
+      )
+
+    );
   }
   } 
 
